@@ -17,7 +17,8 @@ Linear time is indicated with $O(n)$. The running time grows linearly with the i
 Logarithmic time is indicated with $O(log(n))$.The running time grows logarithmically with the input size. **Example**: Binary search in a sorted array. Because the binary search eliminates 50% of the input for each check/operation.
 
 ### Linearithmic Time
-Logarithmic time is indicated with $O(n*log(n))$. The running time grows in proportion to $n*log(n)$. This complexity is common in algorithms that divide the problem into smaller subproblems, solve each subproblem independently, and then combine the results. **Example**: Efficient sorting algorithms like mergesort and heapsort.
+Logarithmic time is indicated with $O(n \ log(n))$. 
+The running time grows in proportion to $n \ log(n)$. This complexity is common in algorithms that divide the problem into smaller subproblems, solve each subproblem independently, and then combine the results. **Example**: Efficient sorting algorithms like mergesort and heapsort.
 
 
 
