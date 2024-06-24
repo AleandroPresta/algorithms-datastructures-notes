@@ -5,4 +5,5 @@ Notes on algorithms and data structures.
 
 <ol>
     <li><a href="./01 - Big O/">Big O</a></li>
+    <li><a href="./02 - Arrays/">Arrays</a></li>
 </ul>
