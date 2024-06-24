@@ -1,0 +1,13 @@
+# Big O
+The purpose of Big O is to define the efficiency of any given algorithm and how their running time or space requirements grow as the input size grows. There are two types of complexity:
+
+1. Time Complexity;
+2. Space Complexity.
+
+This efficiency usually refers to the *worst case scenario*. Big O doesn't care about hardware or software cababilities.
+
+### Constant Time
+Constant time is indicated with `O(1)`. It is called constant because the running time does not change with the size of the input. Example: Accessing an element in an array by index.
+
+### Linear Time
+Linear time is indicated with `O(n)`. 
