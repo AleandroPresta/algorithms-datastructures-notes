@@ -20,6 +20,22 @@ Logarithmic time is indicated with $O(log(n))$.The running time grows logarithmi
 Logarithmic time is indicated with $O(n \ log(n))$. 
 The running time grows in proportion to $n \ log(n)$. This complexity is common in algorithms that divide the problem into smaller subproblems, solve each subproblem independently, and then combine the results. **Example**: Efficient sorting algorithms like mergesort and heapsort.
 
+### Quadratic Time
+Quadratic time is indicated with $O(n^2)$.
+The running time grows proportionally to the square of the input size. Example: Simple sorting algorithms like bubble sort, insertion sort.
+
+### Cubic Time
+Cubic time is indicated with $O(n^3)$.
+The running time grows proportionally to the cube of the input size. Example: Certain dynamic programming algorithms.
+
+### Exponential Time
+Exponential time is indicated with $O(2^n)$.
+The running time doubles with each additional element in the input. Example: Solving the traveling salesman problem using brute-force.
+
+### Factorial Time
+Factorial time is indicated with $O(n!)$.
+The running time grows factorially with the input size. Example: Generating all permutations of a set.
+
 
 
 
