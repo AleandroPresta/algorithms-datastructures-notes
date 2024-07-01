@@ -39,8 +39,8 @@ The Two Sum problem can be efficiently solved using a hash map (or dictionary) t
   5. If no solution is found after iterating through the array, return an appropriate response (based on problem constraints, there should always be a solution).
 
 ### Complexity
-- **Time Complexity**: O(n), where n is the number of elements in the array. This is because we traverse the list containing n elements only once, and each lookup and insertion in the hash map takes average O(1) time.
-- **Space Complexity**: O(n), due to the extra space used by the hash map to store elements and their indices.
+- **Time Complexity**: $O(n)$, where n is the number of elements in the array. This is because we traverse the list containing n elements only once, and each lookup and insertion in the hash map takes average $O(1)$ time.
+- **Space Complexity**: $O(n)$, due to the extra space used by the hash map to store elements and their indices.
 
 ### Edge Cases
 - Arrays with fewer than two elements (though the problem states there will always be a solution).
