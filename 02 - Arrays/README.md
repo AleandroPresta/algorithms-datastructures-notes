@@ -50,7 +50,7 @@ Arrays support several operations. Here are the common ones with their time and 
    - **Description**: Find the index of an element with a specific value.
    - **Time Complexity**: $O(n)$
      - Linear Search: $O(n)$
-     - Binary Search (only for sorted arrays): O(log n)
+     - Binary Search (only for sorted arrays): $O(log(n))$
    - **Space Complexity**: $O(1)$
 
 6. **Finding the Length**
