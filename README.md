@@ -8,4 +8,6 @@ Notes on algorithms and data structures.
     <li><a href="./02 - Arrays/">Arrays</a></li>
     <li><a href="./03 - Linked Lists/">Linked Lists</a></li>
     <li><a href="./04 - Stacks/">Stacks</a></li>
+    <br>
+    <li><a href="./Problems/">Problems</a></li>
 </ul>
