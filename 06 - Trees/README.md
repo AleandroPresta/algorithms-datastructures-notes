@@ -2,6 +2,9 @@
 
 ## Table of Contents
 1. [Introduction and Nomenclature](#introduction-and-nomenclature)
+    - [Traversal](#traversal)
+      - [Depth-First Traversal (DFT)](#depth-first-traversal-dft)
+      - [Breadth-First Traversal (BFT)](#breadth-first-traversal-bft)
 2. [Types of Trees](#types-of-trees)
     - [Binary Trees](#binary-trees)
     - [Binary Search Trees](#binary-search-tree)
@@ -18,6 +21,8 @@
     - [Checking Balanced](#7-checking-balanced)
 4. [Special Operations for Balanced Trees](#special-operations-for-balanced-trees)
     - [Rotations (AVL, Red-Black Tree)](#8-rotations-avl-red-black-tree)
+5. [Usage](#usage)
+6. [Validation of Trees](#validation-of-trees)
 
 ## Introduction and Nomenclature
 The tree data structure is a type of graph. A tree has a **root node** (top node) that will have a relationship with its child nodes. The path that connects the root node to the child nodes is called a **branch**. The **leaf node** is the node that doesn’t have any children and is not the root node.
@@ -25,6 +30,26 @@ The tree data structure is a type of graph. A tree has a **root node** (top node
 **Height** in trees is the number of nodes from the highest branch to the root node. The **depth** of a tree is the count of nodes from a specific node to the root node.
 
 ![alt text](images/tree_diagram.png)
+
+### Traversal
+#### Depth-First Traversal (DFT)
+
+- **Preorder Traversal**: Visit root, then left subtree, then right subtree.
+  - Sequence: Root -> Left -> Right.
+  - Example: For tree A -> B, C -> D, E, traversal: A, B, D, E, C.
+
+- **Inorder Traversal**: Visit left subtree, root, then right subtree.
+  - Sequence: Left -> Root -> Right.
+  - Example: For tree A -> B, C -> D, E, traversal: D, B, E, A, C.
+
+- **Postorder Traversal**: Visit left subtree, right subtree, then root.
+  - Sequence: Left -> Right -> Root.
+  - Example: For tree A -> B, C -> D, E, traversal: D, E, B, C, A.
+
+#### Breadth-First Traversal (BFT)
+
+- **Level-Order Traversal**: Visit nodes level by level.
+  - Example: For tree A -> B, C -> D, E, traversal: A, B, C, D, E.
 
 ## Types of Trees
 ### Binary Trees
@@ -118,3 +143,11 @@ The colors impose specific constraints that help guide the rebalancing process. 
 - **Time Complexity**: $O(1)$
 - **Space Complexity**: $O(1)$
 
+## Usage
+- **DBMS**: Trees are used to implement indexing in databases which makes data retrieval operations efficient. B-trees and B+ trees are commonly used in database management systems.
+- **File Systems**: Trees are used to represent the hierarchical structure of directories and files in file systems. This allows for efficient navigation and organization of files.
+- **Syntax Trees**: Trees are used to represent the structure of source code in compilers and interpreters. Abstract Syntax Trees (ASTs) help in understanding and analyzing the syntax of the programming language.
+- **Priority Queues**: Trees, specifically binary heaps, are used to implement priority queues. This allows for efficient insertion and deletion of elements based on priority.
+
+## Validation of Binary Search Trees
+A Binary Search Tree can be validated by using an Inorder traversal. If the result of this traversal is an ordered array, then the tree is valid.
