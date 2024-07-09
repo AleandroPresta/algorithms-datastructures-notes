@@ -16,7 +16,7 @@
     - [Minimum/Maximum](#5-minimummaximum)
     - [Height Calculation](#6-height-calculation)
     - [Checking Balanced](#7-checking-balanced)
-4. [Special Operations for Balanced Trees]
+4. [Special Operations for Balanced Trees](#special-operations-for-balanced-trees)
     - [Rotations (AVL, Red-Black Tree)](#8-rotations-avl-red-black-tree)
 
 ## Introduction and Nomenclature
