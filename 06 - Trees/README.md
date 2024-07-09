@@ -47,6 +47,19 @@ A **balanced tree** is a tree that follows the 3 conditions:
 In an **AVL tree**, the heights of the two child subtrees of any node differ by at most one; if at any time they differ by more than one, rebalancing is done to restore this property.
 
 ### Red-Black Trees
+A Red-Black Tree is a type of self-balancing binary search tree with the following properties:
+
+1. Each node is either red or black.
+2. The root is black.
+3. All leaves (NIL nodes) are black.
+4. If a red node has children then, the children are always black.
+5. Every path from a node to its descendant NIL nodes has the same number of black nodes.
+
+The colors impose specific constraints that help guide the rebalancing process. These constraints are:
+- Each node is either red or black.
+- The root is always black.
+- Red nodes cannot have red children (no two consecutive red nodes).
+- Every path from a given node to any of its descendant leaves has the same number of black nodes (black-height).
 
 
 ## Operations on Trees
