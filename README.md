@@ -12,6 +12,7 @@ Notes on algorithms and data structures.
     <li><a href="./05 - Queues/">Queues</a></li>
     <li><a href="./06 - Trees/">Trees</a></li>
     <li><a href="./08 - HashSet and HashMap">HashSet and HashMap</a></li>
+    <li><a href="./09 - Heap and Trie/">Heap and Trie</a></li>
 </ul>
 <br>
 <a href="./Problems/">Problems</a>
