@@ -10,6 +10,7 @@
 2. [Trie](#trie)
     - [Structure of a Trie](#structure-of-a-trie)
     - [Basic Operations and Their Complexities](#basic-operations-and-their-complexities)
+    - [Example of a Trie](#example-of-a-trie)
 
 ## Heap
 
@@ -172,3 +173,33 @@ A Trie, also known as a prefix tree, is a tree-like data structure that is used 
     -   **Procedure**:
         -   Use Depth-First Search (DFS) or Breadth-First Search (BFS) to visit all nodes.
         -   Collect characters along the path and form words.
+
+### Example of a Trie
+
+Consider inserting the words "cat", "car", "cap", and "dog" into a Trie:
+
+```
+       (root)
+      /  |    \
+    c   d    ...
+    |     |
+    a     o
+    |     |
+    t     g
+  / | \   |
+ r  p ... .
+```
+
+-   After inserting "cat", "car", and "cap", they share the common prefix "ca".
+-   Inserting "dog" starts a new branch from the root.
+
+### Advantages of Tries
+
+-   Efficient for searching, inserting, and deleting strings.
+-   Space-efficient when storing many strings with common prefixes.
+-   Supports operations like prefix search and autocomplete efficiently.
+
+### Disadvantages of Tries
+
+-   Can consume a lot of memory if many nodes are sparse.
+-   Implementation complexity can be higher compared to simpler data structures like hash tables.
