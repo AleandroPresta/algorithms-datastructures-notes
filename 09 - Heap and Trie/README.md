@@ -108,8 +108,6 @@ A Trie, also known as a prefix tree, is a tree-like data structure that is used 
 
     -   Nodes can have a flag (or marker) to indicate the end of a valid word.
 
-A Trie, also known as a prefix tree, is a tree-like data structure that is used to efficiently store and retrieve keys in a dataset of strings. It is particularly useful for handling large dictionaries of words, like those used in autocompletion features or spell checking.
-
 ### Structure of a Trie
 
 1.  **Nodes and Edges**:
