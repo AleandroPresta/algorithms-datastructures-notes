@@ -165,14 +165,13 @@ Consider inserting the words "cat", "car", "cap", and "dog" into a Trie:
 
 ```
        (root)
-      /  |    \
-    c   d    ...
+      /   |   \
+    c     d   ...
     |     |
     a     o
     |     |
-    t     g
-  / | \   |
- r  p ... .
+  / | \   g
+ t  r  p .
 ```
 
 -   After inserting "cat", "car", and "cap", they share the common prefix "ca".
