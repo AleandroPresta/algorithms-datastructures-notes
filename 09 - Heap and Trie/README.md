@@ -93,21 +93,6 @@ By maintaining the heap property, heaps are efficient for priority queue operati
 
 A Trie, also known as a prefix tree, is a tree-like data structure that is used to efficiently store and retrieve keys in a dataset of strings. It is particularly useful for handling large dictionaries of words, like those used in autocompletion features or spell checking.
 
-1.  **Nodes and Edges**:
-
-    -   Each node represents a character of a string.
-    -   The root node is empty (does not contain any character).
-    -   Edges connect nodes and represent the next character in the string.
-
-2.  **Paths**:
-
-    -   A path from the root to a leaf node represents a complete string (or key).
-    -   Intermediate nodes along the path represent prefixes of the string.
-
-3.  **End of Word Marker**:
-
-    -   Nodes can have a flag (or marker) to indicate the end of a valid word.
-
 ### Structure of a Trie
 
 1.  **Nodes and Edges**:
