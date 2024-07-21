@@ -8,6 +8,8 @@
     - [Implementation Details](#implementation-details)
     - [Example Operations on a Max-Heap](#example-operations-on-a-max-heap)
 2. [Trie](#trie)
+    - [Structure of a Trie](#structure-of-a-trie)
+    - [Basic Operations and Their Complexities](#basic-operations-and-their-complexities)
 
 ## Heap
 
@@ -85,3 +87,88 @@ A heap is a specialized tree-based data structure that satisfies the heap proper
 By maintaining the heap property, heaps are efficient for priority queue operations, providing quick access to the maximum or minimum element.
 
 ## Trie
+
+A Trie, also known as a prefix tree, is a tree-like data structure that is used to efficiently store and retrieve keys in a dataset of strings. It is particularly useful for handling large dictionaries of words, like those used in autocompletion features or spell checking.
+
+1.  **Nodes and Edges**:
+
+    -   Each node represents a character of a string.
+    -   The root node is empty (does not contain any character).
+    -   Edges connect nodes and represent the next character in the string.
+
+2.  **Paths**:
+
+    -   A path from the root to a leaf node represents a complete string (or key).
+    -   Intermediate nodes along the path represent prefixes of the string.
+
+3.  **End of Word Marker**:
+
+    -   Nodes can have a flag (or marker) to indicate the end of a valid word.
+
+A Trie, also known as a prefix tree, is a tree-like data structure that is used to efficiently store and retrieve keys in a dataset of strings. It is particularly useful for handling large dictionaries of words, like those used in autocompletion features or spell checking.
+
+### Structure of a Trie
+
+1.  **Nodes and Edges**:
+
+    -   Each node represents a character of a string.
+    -   The root node is empty (does not contain any character).
+    -   Edges connect nodes and represent the next character in the string.
+
+2.  **Paths**:
+
+    -   A path from the root to a leaf node represents a complete string (or key).
+    -   Intermediate nodes along the path represent prefixes of the string.
+
+3.  **End of Word Marker**:
+
+    -   Nodes can have a flag (or marker) to indicate the end of a valid word.
+
+### Basic Operations and Their Complexities
+
+1.  **Insertion**:
+
+    -   **Description**: Insert a word into the Trie.
+    -   **Complexity**: $O(L)$, where L is the length of the word being inserted.
+    -   **Procedure**:
+        -   Start from the root node.
+        -   For each character in the word, check if the corresponding child node exists.
+        -   If it does not exist, create a new node.
+        -   Move to the child node.
+        -   Mark the end of the word on the last node.
+
+2.  **Search**:
+
+    -   **Description**: Search for a word in the Trie.
+    -   **Complexity**: $O(L)$, where L is the length of the word being searched.
+    -   **Procedure**:
+        -   Start from the root node.
+        -   For each character in the word, move to the corresponding child node.
+        -   If a child node does not exist, the word is not present in the Trie.
+        -   If all characters are found, check if the last node is marked as the end of the word.
+
+3.  **Prefix Search (StartsWith)**:
+
+    -   **Description**: Check if there is any word in the Trie that starts with a given prefix.
+    -   **Complexity**: $O(L)$, where L is the length of the prefix.
+    -   **Procedure**:
+        -   Start from the root node.
+        -   For each character in the prefix, move to the corresponding child node.
+        -   If a child node does not exist, no word with the given prefix is present in the Trie.
+        -   If all characters are found, return true.
+
+4.  **Deletion**:
+
+    -   **Description**: Delete a word from the Trie.
+    -   **Complexity**: $O(L)$, where L is the length of the word being deleted.
+    -   **Procedure**:
+        -   Perform a search to check if the word exists.
+        -   If the word is found, backtrack and remove nodes that are no longer part of any other word.
+
+5.  **Traversal**:
+
+    -   **Description**: Traverse all the words in the Trie.
+    -   **Complexity**: $O(N)$, where $N$ is the number of nodes in the Trie.
+    -   **Procedure**:
+        -   Use Depth-First Search (DFS) or Breadth-First Search (BFS) to visit all nodes.
+        -   Collect characters along the path and form words.
