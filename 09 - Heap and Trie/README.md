@@ -89,6 +89,8 @@ By maintaining the heap property, heaps are efficient for priority queue operati
 
 ## Trie
 
+![alt text](image-1.png)
+
 A Trie, also known as a prefix tree, is a tree-like data structure that is used to efficiently store and retrieve keys in a dataset of strings. It is particularly useful for handling large dictionaries of words, like those used in autocompletion features or spell checking.
 
 1.  **Nodes and Edges**:
