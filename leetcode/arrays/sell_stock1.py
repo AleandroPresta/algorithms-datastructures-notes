@@ -3,23 +3,14 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        max_profit_total = 0
-        # Search a day to buy
-        for i in range(0, len(prices)): 
-            max_profit_i = 0
-            current_buy_price = prices[i]
-            # Seach a day to sell
-            for j in range(i+1, len(prices)):
-                if self.convenient_price(prices[j], current_buy_price, max_profit_i):
-                    max_profit_i = prices[j] - current_buy_price
-            if max_profit_i > max_profit_total:
-                max_profit_total = max_profit_i
-        return max_profit_total
-
-    
-    def convenient_price(self, sell_price, buy_price, max_profit):
-        profit = sell_price - buy_price
-        return True if sell_price > buy_price and profit > max_profit else False
+        profit = 0
+        buy_price = prices[0]
+        for p in prices[1:]:
+            if buy_price > p:
+                buy_price = p
+                
+            profit = max(profit, p-buy_price)
+        return profit
     
     
 class Test:
