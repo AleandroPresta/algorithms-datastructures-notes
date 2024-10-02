@@ -21,3 +21,7 @@ A sorting algorithm is an algorithm that puts elements of a list in a certain or
 | Merge Sort     | O(n log n)           | O(n log n)              | O(n log n)            | O(n)             | Yes    |
 | Quick Sort     | O(n log n)           | O(n log n)              | O(n^2)                | O(log n)         | No     |
 | Heap Sort      | O(n log n)           | O(n log n)              | O(n log n)            | O(1)             | No     |
+
+## Combining Searching and Sorting
+
+When we combine searching and sorting, we can achieve better time complexity. For example, if we sort an array using a sorting algorithm and then search for an element using a searching algorithm, the time complexity will be better than searching in an unsorted array. The overall complexity will be `O(n log n)` for sorting and `O(log n)` for searching, giving us a total of `O(n log n)`.
