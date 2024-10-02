@@ -8,6 +8,9 @@
     -   [Approach to Solve](#approach-to-solve)
     -   [Complexity](#complexity)
     -   [Edge Cases](#edge-cases)
+-   [Smaller then Current](#smaller-then-current)
+    -   [Example](#example-1)
+    -   [Complexity](#complexity-1)
 
 ## Two Sum Problem
 
