@@ -2,9 +2,11 @@ from typing import List
 
 
 class BinarySearch:
-    '''
-        Returns the index of the target element or -1 if the element doesn't exist
-    '''
+    """_summary_ Binary search algorithm implementation.
+
+    Returns:
+        _type_: int - index of the target element in the array.
+    """
     @staticmethod
     def binary_search(arr: List[int], target: int) -> int:
         left, right = 0, len(arr) - 1
