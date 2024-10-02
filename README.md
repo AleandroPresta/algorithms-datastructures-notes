@@ -13,7 +13,7 @@ Notes on algorithms and data structures.
     <li><a href="./06 - Trees/">Trees</a></li>
     <li><a href="./08 - HashSet and HashMap">HashSet and HashMap</a></li>
     <li><a href="./09 - Heap and Trie/">Heap and Trie</a></li>
-    <li><a href="./10 - Algorithm Patterns/">Algorithm Patterns</a></li>
+    <li><a href="./10 - Searching Algorithms/">Searching Algorithms</a></li>
 </ul>
 <br>
 <a href="./Problems/">Problems</a>
