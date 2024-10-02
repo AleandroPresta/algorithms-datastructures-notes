@@ -8,9 +8,6 @@
     -   [Approach to Solve](#approach-to-solve)
     -   [Complexity](#complexity)
     -   [Edge Cases](#edge-cases)
--   [Smaller then Current](#smaller-then-current)
-    -   [Example](#example-1)
-    -   [Complexity](#complexity-1)
 
 ## Two Sum Problem
 
@@ -56,25 +53,3 @@ The Two Sum problem can be efficiently solved using a hash map (or dictionary) t
 -   Arrays with duplicate elements that may confuse the solution.
 
 This problem is commonly used to introduce basic hash map usage and efficient searching techniques in algorithm design and is a good starting point for understanding how to optimize solution finding in data structures.
-
-## Smaller then Current
-
-Given an array `nums`, for each `nums[i]` find the number of elements in the array that are smaller than it. Return the array of counts. The solution can be found combining sorting and searching algorithms.
-
-### Example
-
-```
-Input: nums = [8, 1, 2, 2, 3]
-Output: [4, 0, 1, 1, 3]
-Explanation: For each element in the array, the number of elements smaller than it are:
-- 8: 4 elements (1, 2, 2, 3)
-- 1: 0 elements
-- 2: 1 element (1)
-- 2: 1 element (1)
-- 3: 3 elements (1, 2, 2)
-```
-
-### Complexity
-
--   **Time Complexity**: $O(n \log n)$, where n is the number of elements in the array. This is due to the sorting operation.
--   **Space Complexity**: $O(n)$, where n is the number of elements in the array. This is due to the extra space used to store the sorted array and the result array.
