@@ -6,19 +6,25 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        i = 0
-        while i < k:
-            self.rotate_one_step(nums)
-            i += 1
+        # Edge cases
+        if k <= 0 or nums == []:
+            return
+        
+        # Normalize k if k > len(nums)
+        while k > len(nums):
+            k -= len(nums)
             
-    def rotate_one_step(self, nums: List[int]):
-        last_elem = nums[-1]
-        j = len(nums)
-        while j > 0:
-            nums[j] = nums[j-1]
+        # If k = len(nums) after normalization than the rotate array is the same as the original
+        if len(nums) == k:
+            return
+        
+        last_elems = nums[-k:] # save the last k elements of nums
+        j = len(nums)-1
+        while j > k-1:
+            nums[j] = nums[j-k]
             j -= 1
-            
-        nums[0] = last_elem
+        
+        nums[0:k] = last_elems
     
 
 class TestRotate:
@@ -42,6 +48,10 @@ class TestRotate:
         nums = [1]
         Solution().rotate(nums, 0)
         assert nums == [1]
+        
+        nums = [1, 2]
+        Solution().rotate(nums, 5)
+        assert nums == [2, 1]
 
     def test_advanced(self):
         nums = [1, 2, 3, 4, 5, 6, 7]
@@ -68,19 +78,19 @@ class TestRotate:
         nums = []
         Solution().rotate(nums, 3)
         assert nums == []
-
+        print('Test 1 passed')
         nums = [1]
         Solution().rotate(nums, 1)
         assert nums == [1]
-
+        print('Test 2 passed')
         nums = [1, 2]
         Solution().rotate(nums, 3)
         assert nums == [2, 1]
-
+        print('Test 3 passed')
         nums = [1, 2, 3]
         Solution().rotate(nums, 0)
         assert nums == [1, 2, 3]
-
+        print('Test 4 passed')
         nums = [1, 2, 3]
         Solution().rotate(nums, 4)
         assert nums == [3, 1, 2]
