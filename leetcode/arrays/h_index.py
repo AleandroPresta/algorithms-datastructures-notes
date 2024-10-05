@@ -6,13 +6,23 @@ class Solution:
         The h-index is defined as the maximum value of h such that the given researcher has 
         published at least h papers that have each been cited at least h times.
         """
-        h = 1
-        i = 0
+        # Edge cases
+        if citations == [] or citations == [0]:
+            return 0
         
-        # key: h
-        # value: num of articles cited at least h times
-        cit: Dict[int, int] = {}
-        pass
+        h = 0
+        h_max = max(citations)
+        while h < h_max:
+            n_h = 0
+            for i in range(len(citations)):
+                if citations[i] >= h+1:
+                    n_h += 1
+                    
+            if n_h > h:
+                h += 1
+            else:
+                break
+        return h
 
 class Test:
     def test_basic(self):
@@ -47,7 +57,7 @@ class Test:
         assert Solution().hIndex([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) == 0
         assert Solution().hIndex([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) == 1
         assert Solution().hIndex([10, 10, 10, 10, 10, 10, 10, 10, 10, 10]) == 10
-        assert Solution().hIndex([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4
+        assert Solution().hIndex([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == 5
         assert Solution().hIndex([0, 0, 0, 0, 0, 0, 0, 0, 0, 1]) == 1
         assert Solution().hIndex([0, 0, 0, 0, 0, 0, 0, 0, 0, 2]) == 1
 
