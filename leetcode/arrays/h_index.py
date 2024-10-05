@@ -17,8 +17,6 @@ class Solution:
             for i in range(len(citations)):
                 if citations[i] >= h+1:
                     n_h += 1
-                    if (n_h >= h):
-                        continue
             if n_h > h:
                 h += 1
             else:
