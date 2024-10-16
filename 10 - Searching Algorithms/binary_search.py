@@ -2,20 +2,21 @@ from typing import List
 
 
 class BinarySearch:
-    """_summary_ Binary search algorithm implementation.
-
-    Returns:
-        _type_: int - index of the target element in the array.
-    """
-    @staticmethod
-    def binary_search(arr: List[int], target: int) -> int:
-        left, right = 0, len(arr) - 1
+    def binary_search(a: List[int], target: int) -> int:
+        if not a: return -1
+        
+        left = 0
+        right = len(a)-1
         while left <= right:
-            mid = left + (right - left) // 2
-            if arr[mid] == target:
-                return mid
-            elif arr[mid] < target:
-                left = mid + 1
+            middle = left + (right - left) // 2
+            if a[middle] == target:
+                return middle
             else:
-                right = mid - 1
+                if target > a[middle]:
+                    left = middle + 1
+                else:
+                    right = middle + 1
+        
         return -1
+    
+    
